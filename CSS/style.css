@@ -1,0 +1,442 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --body-color: white;
+    --card-bg: #f0f2fa;
+    --text-color: black;
+  }
+  
+ 
+  body {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-color);
+    transition: 0.5s ease-in-out;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin: 23px;
+  }
+  .peddingTasks1 {
+    color: var(--text-color);
+    font-family:  sans-serif;
+    padding-bottom: 8px;
+    font-size: 25px;
+  }
+.peddingTasks2 {
+    color: var(--text-color);
+    font-family:  sans-serif;
+    font-size: 25px;
+        padding-bottom: 8px;
+    left: 160px;
+        position: absolute;
+
+  }
+.peddingTasks3 {
+    color: var(--text-color);
+    font-family:  sans-serif;
+    font-size: 25px;
+        padding-bottom: 8px;
+    left: 180px;
+        position: absolute;
+
+  }
+
+  .title {
+    margin-top: 45px;
+    text-align: center;
+ font-family: 'Titillium Web', sans-serif;    font-size: 65px;
+    font-weight: bolder;
+    color: #9fc5f8;
+  }
+  /* add button */
+  .plus {
+    position: fixed;
+    background-color: #9fc5f8;
+    color: white;
+    border: none;
+    width: 65px;
+    height: 65px;
+    font-size: 20px;
+    top: 85%;
+    margin-left: 10%;
+    border-radius: 80px;
+    cursor: pointer;
+    
+  }
+  
+  .taskName-detail {
+    position: relative;
+    width: 80%;
+    height: 200%;
+  }
+  .over {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    transition: 10s;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  /* form style */
+  .box {
+    margin: 0 auto;
+    width: 80%;
+    height: 250%;
+    margin-top: 50%;
+    border: 0 none;
+    border-radius: 5px;
+    text-align: center;
+ font-family: 'Titillium Web', sans-serif;  }
+
+  fieldset {
+    display: flex;
+    justify-content: center;
+    height: 22%;
+    background: #9fc5f8;
+    border: 0 none;
+    border-radius: 25px;
+      width: auto;
+  }
+  .fs-title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 7%;
+  }
+  .formButtons,
+  .details,
+  .tname,
+  .date {
+    position: absolute;
+    font-size: 20px;
+    transition: 0.5s;
+  }
+  .details {
+    margin-top: 50%;
+    text-align: center;
+  }
+  .deText {
+    margin-left: 35%;
+  }
+  .details textarea {
+    background-color: rgba(252, 239, 229, 0.6);
+    border: none;
+    outline: none;
+    margin-left: 17.4%;
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .tname {
+    margin-top: 10%;
+    margin-left: 13%;
+    height: 10%;
+  }
+  input[type="text"] {
+    background-color: rgba(252, 239, 229, 0.6);
+    height: 32px;
+    width: 180px;
+    margin-top: 5%;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 18px;
+  }
+  input[type="date"] {
+    background-color: rgba(252, 239, 229, 0.6);
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 18px;
+    height: 35px;
+    width: 100%;
+    border-radius: 2px;
+  }
+  .date {
+    transition: 0.5s;
+    margin-top: 74%;
+    margin-right: 0%;
+  }
+  .formButtons {
+    width: 50%;
+    top: 70%;
+    text-align: center;
+    border-radius: 2px;
+  }
+  .submit {
+    position: absolute;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    padding: 4px 25px;
+    line-height: 25px;
+    margin-left: -2%;
+    border: none;
+    background:#0077B6;
+          border-radius: 15px;
+
+  }
+  .reset {
+    position: absolute;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+          color: white;
+
+    transition: 0.3s;
+    padding: 5px 15px;
+    border: none;
+    right: -2.4%;
+    background:#0077B6;
+                border-radius: 15px;
+
+  }
+  .task {
+    background-color: #9fc5f8;
+    margin-top: 5%;
+    margin-left: 36px;
+    padding: 10px 10px;
+    border-radius: 15px;
+    width: 300px;
+    height: 100px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .task input[type="checkbox"] {
+    float: left;
+    width: 25px;
+    height: 20px;
+  }
+  .task h3 {
+    margin-right: 8%;
+            color: white;
+
+  }
+  .task .delete {
+    position: absolute;
+    margin-left: 28%;
+    margin-top: -17%;
+    cursor: pointer;
+      color: white;
+  }
+  .task .edit {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 28.2%;
+    margin-top: -5%;
+    color: black;
+    cursor: pointer;
+            color: white;
+
+  }
+  .task p {
+    font-size: 17px;
+    margin-top: 3%;
+    font-weight: 700;
+            color: white;
+
+  }
+
+  /* responsive for taplet */
+  @media only screen and (min-width: 376px) and (max-width: 1023px) {
+    .header {
+      margin: 27px;
+    }
+    .greeting {
+      font-size: 39px;
+    }
+    .toggle-btn {
+      font-size: 40px;
+    }
+    .plus {
+      width: 85px;
+      height: 85px;
+      font-size: 25px;
+    }
+    .box {
+      margin-top: 23%;
+      height: 3000px;
+    }
+    .fs-title {
+      font-size: 35px;
+      margin-left: -2%;
+    }
+    .tname {
+      margin-top: 15%;
+      margin-left: 18%;
+      width: 304px;
+      font-size: 28px;
+    }
+    .details {
+      margin-top: 45%;
+      margin-left: 8%;
+      text-align: center;
+    }
+    .deText {
+      font-size: 28px;
+      margin-left: 35%;
+    }
+    .details textarea {
+      background-color: rgba(252, 239, 229, 0.6);
+      border: none;
+      outline: none;
+      margin-left: 17.4%;
+      width: 300px;
+      height: 45px;
+      font-size: 25px;
+    }
+    .date {
+      margin-top: 55%;
+      font-size: 28px;
+    }
+    input[type="text"] {
+      width: 300px;
+      height: 45px;
+      font-size: 25px;
+    }
+    input[type="date"] {
+      width: 298px;
+      height: 40px;
+      margin-top: 4.5%;
+      font-size: 25px;
+    }
+    .reset {
+      margin-top: 8%;
+      padding: 11px 30px;
+      font-size: 25px;
+    }
+    .submit {
+      margin-top: 8%;
+      padding: 12.5px 35px;
+      font-size: 25px;
+    }
+    .task {
+      width: 500px;
+      height: 140px;
+      margin-left: 17%;
+      margin-top: 5%;
+      font-size: 30px;
+    }
+    .task input[type="checkbox"] {
+      margin-top: 5%;
+      width: 30px;
+      height: 30px;
+    }
+    .task h3 {
+      margin-right: 7%;
+    }
+    .task .delete {
+      margin-left: 25%;
+      margin-top: -11%;
+      font-size: 25px;
+    }
+    .task .edit {
+      margin-left: 25%;
+      margin-top: -4%;
+      font-size: 25px;
+    }
+    .task p {
+      font-size: 25px;
+      margin-top: 4%;
+    }
+  }
+  /* responsive for desktop */
+  @media (min-width: 1024px) {
+    .header {
+      margin: 30px;
+    }
+    .greeting {
+      font-size: 30px;
+    }
+    .toggle-btn {
+      font-size: 28px;
+    }
+    .title {
+      margin-top: -3%;
+      font-size: 55px;
+    }
+    .plus {
+      position: fixed;
+      width: 80px;
+      height: 80px;
+      font-size: 25px;
+      margin-top: -3%;
+    }
+    .box {
+      margin-top: 7%;
+      height: 2150px;
+      width: 800px;
+    }
+    .tname {
+      margin-top: 35px;
+      margin-left: 26%;
+      width: 304px;
+    }
+    .details {
+      margin-top: 20%;
+      margin-left: 17.9%;
+      width: 304px;
+    }
+    .deText {
+      margin-left: 35%;
+    }
+    .details textarea {
+      background-color: rgba(252, 239, 229, 0.6);
+      border: none;
+      outline: none;
+      width: 300px;
+      height: 45px;
+    }
+    .date {
+      margin-top: 22%;
+    }
+    input[type="text"] {
+      width: 300px;
+    }
+    input[type="date"] {
+      width: 300px;
+    }
+    .reset {
+      margin-top: 8%;
+      margin-right: 25%;
+    }
+    .submit {
+      margin-top: 8%;
+      margin-left: 25%;
+      padding: 3px 23px;
+    }
+    .task {
+      width: 500px;
+      height: 120px;
+      margin-left: 31.5%;
+      margin-top: 2%;
+    }
+    .task h3 {
+      margin-left: 6%;
+      font-size: 25px;
+    }
+    .task h3,
+    .task p {
+      margin-top: 2%;
+    }
+    .task input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+    .task .delete {
+      margin-left: 16%;
+      margin-top: -5%;
+    }
+    .task .edit {
+      margin-left: 16%;
+      margin-top: -1.5%;
+    }
+  }
