@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    
+    <title>ToDo list</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+     <div class="header">  
+        <h3 class="peddingTasks1">There are: </h3>
+        <h3 id="numstill" class="peddingTasks2"></h3>
+        <h3 class="peddingTasks3">Pending tasks</h3>
+
+    </div> 
+
+<div class="container">
+    <h1 class="title">My To do list</h1>
+
+    <div id="myWindow" class="overlay">
+        <form class="box">
+          <fieldset>
+            <div class="taskName-detail">
+              <p class="fs-title">Task Name</p>
+              <div class="tname">
+                <label>Task Name</label><br /><input type="text" id="inp" />
+              </div>
+              <div class="details">
+                <label class="deText">Task description
+                </label><br /><textarea id="details"
+                  name="Text1"
+                  cols="23"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <div class="date">Task Date<br><input type="date" id="date" /></div>
+            <br />
+            <div class="formButtons">
+              <input type="reset" class="reset" />
+              <input class="submit" type="button" id="submit" value="Add" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+      <button id="plus" class="plus">
+        <i class="fas fa-plus"></i>
+      </button>
+      <div id="todolist"></div>
+    <script src="JS/script.js"></script>
+</body>
+</html>  
